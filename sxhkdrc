@@ -17,10 +17,6 @@ super + s
 super + Escape
     pkill -USR1 -x sxhkd
 
-#
-# bspwm hotkeys
-#
-
 # quit/restart bspwm
 super + alt + {q,r}
     bspc {quit,wm -r}
@@ -41,10 +37,6 @@ super + y
 super + g
     bspc node -s biggest.window
 
-#
-# state/flags
-#
-
 # set the window state
 super + {t,shift + t,s,f}
     bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
@@ -52,10 +44,6 @@ super + {t,shift + t,s,f}
 # set the node flags
 super + ctrl + {m,x,y,z}
     bspc node -g {marked,locked,sticky,private}
-
-#
-# focus/swap
-#
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
@@ -87,10 +75,6 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
     bspc {desktop -f,node -d} '^{1-9,10}'
 
-#
-# preselect
-#
-
 # preselect the direction
 super + ctrl + {h,j,k,l}
     bspc node -p {west,south,north,east}
@@ -106,10 +90,6 @@ super + ctrl + space
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
     bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
-
-#
-# move/resize
-#
 
 # expand a window by moving one of its side outward
 super + alt + {h,j,k,l}
@@ -147,3 +127,7 @@ super + z
 # keyboard layout swapping
 super + x
     /bin/bash $HOME/.scripts/kbswap_br_us.sh
+
+# printscreen
+Print
+    flameshot launcher
