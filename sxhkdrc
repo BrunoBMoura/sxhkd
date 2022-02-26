@@ -10,9 +10,6 @@ super + Return
 super + @space
     rofi -show drun
 
-super + s
-    rofi -show window
-
 # make sxhkd reload its configuration files:
 super + Escape
     pkill -USR1 -x sxhkd
@@ -102,6 +99,10 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
     bspc node -v {-20 0,0 20,0 -20,20 0}
+
+# kind of alt + tab
+super + u
+    rofi -show window
 
 # volume control
 XF86AudioLowerVolume
